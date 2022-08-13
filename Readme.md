@@ -23,8 +23,9 @@ chmod +x install.sh
 ./install.sh
 ```
 
-# How to Install the server
+# Some stuff
 
+- You need to install sudo
 - RustDesk is installed to /opt/rustdesk
 - Logs are here /var/log/rustdesk/
 - You can control it with systemctl XXX rustdesksignal.service + rustdeskrelay.service
