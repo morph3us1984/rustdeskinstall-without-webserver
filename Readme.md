@@ -23,5 +23,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
+# How to Install the server
+
+- RustDesk is installed to /opt/rustdesk
+- Logs are here /var/log/rustdesk/
+- You can control it with systemctl XXX rustdesksignal.service + rustdeskrelay.service
+
 # Info
 I remove the Linux + Powershell-Script and the webserver. I dont need that on my server.
