@@ -12,7 +12,6 @@ ufw allow proto tcp from YOURIP to any port 22
 If you have UFW installed use the following commands:
 ```
 ufw allow 21115:21119/tcp
-ufw allow 8000/tcp
 ufw allow 21116/udp
 sudo ufw enable
 ```
@@ -24,5 +23,5 @@ chmod +x install.sh
 ./install.sh
 ```
 
-# Rustdesk windows powershell install script
-Generates a powershell script for install grabbing WAN IP and Key currently in /opt/rustdesk but will be moved to a web url for easy deployment.
+# Info
+I remove the Linux + Powershell-Script and the webserver. I dont need that on my server.
