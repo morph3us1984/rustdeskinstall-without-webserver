@@ -3,7 +3,6 @@
 # Get Username
 uname=$(whoami) # not used btw .. yet
 
-sudo systemctl stop gohttpserver.service
 sudo systemctl stop rustdesksignal.service
 sudo systemctl stop rustdeskrelay.service
 
@@ -100,14 +99,5 @@ while ! [[ $CHECK_RUSTDESK_READY ]]; do
 done
 
 rm rustdesk-server-linux-x64.zip
-
-cd /opt/gohttp
-GOHTTPLATEST=$(curl https://api.github.com/repos/codeskyblue/gohttpserver/releases/latest -s | grep "tag_name"| awk '{print substr($2, 2, length($2)-3) }')
-wget "https://github.com/codeskyblue/gohttpserver/releases/download/${GOHTTPLATEST}/gohttpserver_${GOHTTPLATEST}_linux_amd64.tar.gz"
-tar -xf  gohttpserver_${GOHTTPLATEST}_linux_amd64.tar.gz
-
-rm gohttpserver_${GOHTTPLATEST}_linux_amd64.tar.gz
-
-sudo systemctl start gohttpserver.service
 
 echo -e "Updates are complete"
