@@ -18,7 +18,7 @@ sudo ufw enable
 
 Run the following commands:
 ```
-wget https://raw.githubusercontent.com/dinger1986/rustdeskinstall/master/install.sh
+wget https://github.com/Hoerli1337/rustdeskinstall-without-webserver/raw/master/install.sh
 chmod +x install.sh
 ./install.sh
 ```
