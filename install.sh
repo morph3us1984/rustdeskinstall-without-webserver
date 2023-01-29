@@ -113,8 +113,8 @@ cd /opt/rustdesk/ || exit 1
 
 #Download latest version of Rustdesk
 RDLATEST=$(curl https://api.github.com/repos/rustdesk/rustdesk-server/releases/latest -s | grep "tag_name"| awk '{print substr($2, 2, length($2)-3) }')
-wget "https://github.com/rustdesk/rustdesk-server/releases/download/${RDLATEST}/rustdesk-server-linux-x64.zip"
-unzip rustdesk-server-linux-x64.zip
+wget "https://github.com/rustdesk/rustdesk-server/releases/download/${RDLATEST}/rustdesk-server-linux-amd64.zip"
+unzip rustdesk-server-linux-amd64.zip
 
 # Make Folder /var/log/rustdesk/
 if [ ! -d "/var/log/rustdesk" ]; then
@@ -182,7 +182,7 @@ done
 pubname=$(find /opt/rustdesk -name "*.pub")
 key=$(cat "${pubname}")
 
-rm rustdesk-server-linux-x64.zip
+rm rustdesk-server-linux-amd64.zip
 
 echo -e "Your IP/DNS Address is ${wanip}"
 echo -e "Your public key is ${key}"
