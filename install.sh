@@ -168,7 +168,7 @@ RestartSec=10
 WantedBy=multi-user.target
 EOF
 )"
-mv /opt/rustdesk/amd64/* /opt/rustdesk/ 
+mv /opt/rustdesk/*/* /opt/rustdesk/ 
 echo "${rustdeskrelay}" | sudo tee /etc/systemd/system/rustdeskrelay.service > /dev/null
 sudo systemctl daemon-reload
 sudo systemctl enable rustdeskrelay.service
