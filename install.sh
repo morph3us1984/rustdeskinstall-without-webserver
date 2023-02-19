@@ -169,6 +169,7 @@ WantedBy=multi-user.target
 EOF
 )"
 echo "${rustdeskrelay}" | sudo tee /etc/systemd/system/rustdeskrelay.service > /dev/null
+mv /opt/rustdesk/*/* /opt/rustdesk/
 sudo systemctl daemon-reload
 sudo systemctl enable rustdeskrelay.service
 sudo systemctl start rustdeskrelay.service
